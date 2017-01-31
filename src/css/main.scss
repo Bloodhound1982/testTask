@@ -1,0 +1,120 @@
+@import "normalize";
+
+/*-------- Variables start ------------*/
+$font_light_color: #aaaaaa;
+$font_dark_color: #333333;
+
+/*-------- Variables end ------------*/
+
+html {
+  font-size: 1vw;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 0.06rem;
+}
+a, a:hover, a:focus, a:visited {
+  text-decoration: none;
+  color: $font_light_color;
+}
+/*-------- Header start ------------*/
+
+.header_top {
+  height: 3rem;
+  border-bottom: 1px solid #ededed;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: {
+    left: 10.3rem;
+    right: 10.3rem;
+  }
+  .header_top_helps {
+    padding-left: 0;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+
+    li {
+      margin-right: 2.4rem;
+      a:hover {
+        color: $font_dark_color;
+      }
+    }
+  }
+
+  .header_top_locals {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .select_style {
+      position: relative;
+      overflow: hidden;
+    }
+    .currency {
+      width: 6.6rem;
+      margin-right: 0.35rem;
+     }
+    .language {
+      margin-left: 1rem;
+      margin-right: 0.2rem;
+      width: 2.5rem;
+    }
+    .select_style select {
+        background: transparent;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.06rem;
+        color: $font_light_color;
+        text-transform: uppercase;
+        border: none;
+        padding: 0.1rem;
+        font-family: 'Lato', sans-serif;
+        cursor: pointer;
+      }
+    .select_style.currency select {
+      width: 7.5rem;
+    }
+    .select_style.language select {
+      width: 3.5rem;
+    }
+    .select_style select:focus {
+      outline: none;
+    }
+    .select_style.currency:before {
+      width: 1rem;
+      background: url('/img/dropdown.png') no-repeat;
+      position: absolute;
+      content: ".";
+      right: 0.5rem;
+      top: 0.5rem;
+    }
+    .select_style.language:before {
+      width: 1rem;
+      background: url('/img/dropdown.png') no-repeat;
+      position: absolute;
+      content: ".";
+      right: -0.5rem;
+      top: 0.5rem;
+    }
+    .divider {
+      height: 3rem;
+      border-left: 1px solid #ededed;
+    }
+  }
+}
+.header_main {
+  height: 6rem;
+
+}
+
+
+
+
+
+
+/*-------- Header end ------------*/
