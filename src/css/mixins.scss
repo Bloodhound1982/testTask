@@ -1,0 +1,9 @@
+@mixin font_set($size, $weight, $main_color, $hover_color) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $main_color;
+  text-transform: uppercase;
+  &:hover {
+    color: $hover_color;
+  }
+}

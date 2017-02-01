@@ -1,4 +1,5 @@
 @import "normalize";
+@import "mixins";
 
 /*-------- Variables start ------------*/
 $font_light_color: #aaaaaa;
@@ -15,6 +16,9 @@ a, a:hover, a:focus, a:visited {
   text-decoration: none;
   color: $font_light_color;
 }
+ul {
+  list-style-type: none;
+}
 /*-------- Header start ------------*/
 
 .header_top {
@@ -30,17 +34,14 @@ a, a:hover, a:focus, a:visited {
   }
   .header_top_helps {
     padding-left: 0;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    list-style-type: none;
     display: flex;
     justify-content: space-around;
 
     li {
       margin-right: 2.4rem;
-      a:hover {
-        color: $font_dark_color;
+      a {
+        @include font_set(0.75rem, 600, $font_light_color, $font_dark_color);
+
       }
     }
   }
@@ -108,8 +109,86 @@ a, a:hover, a:focus, a:visited {
   }
 }
 .header_main {
-  height: 6rem;
+  height: 6.8rem;
+  border-bottom: 1px solid #ededed;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: {
+    left: 10.3rem;
+    right: 10.3rem;
+  }
+  .header_main_logo_wrapper {
+    position: relative;
+    img {
+      position: absolute;
+      top: -2.22rem;
+      left: -0.8rem;
+    }
+  }
 
+  .header_main_nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    li {
+      margin: {
+        left: 2rem;
+        right: 2rem;
+      }
+      &:first-child {
+        margin-left: 8.5rem;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        @include font_set(0.85rem, 600, $font_light_color, $font_dark_color);
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      a.sale {
+        color: #fc411d;
+        &:hover {
+          color: #fc411d;
+          color: darken(#fc411d, 25%);
+        }
+      }
+    }
+  }
+
+  .header_main_bag {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .your_bag {
+      a {
+        @include font_set(0.85rem, 600, $font_light_color, $font_dark_color);
+      }
+    }
+    .bag_count_tag {
+      margin-left: 1rem;
+      padding: 1rem 1.2rem 1rem 1.2rem;
+      border: 2px solid #278adb;
+      border-radius: 2rem;
+      text-align: center;
+      @include font_set(0.85rem, 600, $font_dark_color, $font_dark_color);
+    }
+    .btn_find {
+      margin-left: 1.65rem;
+      color: $font_light_color;
+      cursor: pointer;
+      &:hover {
+        color: $font_dark_color;
+      }
+    }
+
+  }
 }
 
 
