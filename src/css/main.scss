@@ -18,6 +18,7 @@ a, a:hover, a:focus, a:visited {
 }
 ul {
   list-style-type: none;
+  padding-left: 0;
 }
 /*-------- Header start ------------*/
 
@@ -134,23 +135,33 @@ ul {
     justify-content: space-around;
 
     li {
+      padding-top: 0.5rem;
       margin: {
         left: 2rem;
         right: 2rem;
       }
       &:first-child {
-        margin-left: 8.5rem;
+        margin-left: 11rem;
       }
       &:last-child {
         margin-right: 0;
       }
       a {
         @include font_set(0.85rem, 600, $font_light_color, $font_dark_color);
-        &:hover {
-          text-decoration: underline;
+        &:hover:after,
+        &:focus:after {
+          width: 100%;
         }
       }
-
+      a:after {
+        margin-top: 0.4rem;
+        display: block;
+        content: "";
+        height: 0.2rem;
+        width: 0%;
+        background-color: #248ddc;
+        transition: width .1s ease-in-out;
+      }
       a.sale {
         color: #fc411d;
         &:hover {
@@ -160,7 +171,6 @@ ul {
       }
     }
   }
-
   .header_main_bag {
     display: flex;
     justify-content: space-around;
@@ -187,13 +197,96 @@ ul {
         color: $font_dark_color;
       }
     }
+  }
+}
+/*-------- Header end ------------*/
+/*-------- Items part start ------------*/
+.catalogue {
+  h1 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 100;
+    margin-top: 6rem;
+    font-size: 4rem;
+    letter-spacing: -0.01rem;
+  }
+  .catalogue_filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 
+    li {
+      margin: 1.2rem 1.95rem 1.65rem;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        @include font_set(0.85rem, 600, $font_light_color, $font_dark_color);
+        &:hover:after,
+        &:focus:after {
+          width: 100%;
+        }
+        &:after {
+          margin-top: 0.3rem;
+          display: block;
+          content: "";
+          height: 0.2rem;
+          width: 0;
+          background-color: #248ddc;
+          transition: width .1s ease-in-out;
+        }
+      }
+    }
+  }
+  .catalogue_items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: {
+      left: 10.3rem;
+      right: 10.3rem;
+    }
+    .item {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      h3 {
+        margin-top: 1.725rem;
+        font-family: 'Playfair Display', serif;
+        font-weight: 100;
+        letter-spacing: -0.02rem;
+      }
+
+      .price {
+        margin-top: -0.5rem;
+        margin-bottom: 2.35rem;
+        color: $font_light_color;
+        .line-through {
+          text-decoration: line-through;
+        }
+        .sale {
+          margin-left: 0.5rem;
+          color: #fc411d;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .load_more {
+    margin-top: 1.5rem;
+    color: $font_light_color;
+    text-transform: uppercase;
+    font-size: 0.86rem;
+    text-align: center;
   }
 }
 
 
-
-
-
-
-/*-------- Header end ------------*/
+/*-------- Items part end ------------*/
