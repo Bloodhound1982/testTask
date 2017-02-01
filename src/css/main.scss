@@ -287,6 +287,91 @@ ul {
     text-align: center;
   }
 }
-
-
 /*-------- Items part end ------------*/
+/*-------- Subscribe start ------------*/
+.subscribe {
+  height: 15.1rem;
+  margin-top: 3.85rem;
+  padding-top: 4.5rem;
+  background-image: url("/img/subscribe_background.jpg");
+  
+  .subscribe_tag {
+    color: #4a6f88;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+  .subscribe_title {
+    margin-top: 1.3rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #fff;
+  }
+  .subscribe_form {
+    margin-top: 1.9rem;
+    text-align: center;
+
+    .input_wrapper {
+      position: relative;
+
+      input[type='email'] {
+        height: 3rem;
+        width: 19rem;
+        background: none;
+        border: 2px solid #bfe0f5;
+        border-radius: 5rem;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 0.05rem;
+        padding-left: 1.4rem;
+
+        &::-webkit-input-placeholder {color:#fff;}
+        &::-moz-placeholder          {color:#fff;}/* Firefox 19+ */
+        &:-moz-placeholder           {color:#fff;}/* Firefox 18- */
+        &:-ms-input-placeholder      {color:#fff;}
+        &::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+        &::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+        &:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+        &:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+        &:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+        &:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+        &:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+        &:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+
+        &:focus {
+          outline: none;
+          border-color: #fff;
+        }
+      }
+
+      .button_email {
+        position: absolute;
+        left: 56.4rem;
+        top: 0.05rem;
+        display: inline-block;
+        width: 3.3rem;
+        height: 3.3rem;
+        background: url('/img/right_pointer.png') no-repeat;
+        -ms-background-position-x: 50%;
+        background-position-x: 50%;
+        -ms-background-position-y: 50%;
+        background-position-y: 50%;
+        border-radius: 5rem;
+        box-sizing: border-box;
+        
+        &:hover {
+          border: 2px solid #fff;
+          cursor: pointer;
+          transition: border 0.2s ease;
+        }
+      }
+    }
+  }
+}
+
+
+/*-------- Subscribe end ------------*/
