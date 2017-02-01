@@ -4,9 +4,7 @@
 /*-------- Variables start ------------*/
 $font_light_color: #aaaaaa;
 $font_dark_color: #333333;
-
 /*-------- Variables end ------------*/
-
 html {
   font-size: 1vw;
   font-family: 'Lato', sans-serif;
@@ -21,7 +19,6 @@ ul {
   padding-left: 0;
 }
 /*-------- Header start ------------*/
-
 .header_top {
   height: 3rem;
   border-bottom: 1px solid #ededed;
@@ -42,17 +39,14 @@ ul {
       margin-right: 2.4rem;
       a {
         @include font_set(0.75rem, 600, $font_light_color, $font_dark_color);
-
       }
     }
   }
-
   .header_top_locals {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     .select_style {
       position: relative;
       overflow: hidden;
@@ -128,7 +122,6 @@ ul {
       left: -0.8rem;
     }
   }
-
   .header_main_nav {
     display: flex;
     flex-wrap: wrap;
@@ -312,7 +305,6 @@ ul {
   .subscribe_form {
     margin-top: 1.9rem;
     text-align: center;
-
     .input_wrapper {
       position: relative;
 
@@ -347,7 +339,6 @@ ul {
           border-color: #fff;
         }
       }
-
       .button_email {
         position: absolute;
         left: 56.4rem;
@@ -372,6 +363,52 @@ ul {
     }
   }
 }
-
-
 /*-------- Subscribe end ------------*/
+/*-------- Footer start ------------*/
+.footer {
+  height: 7.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: {
+    left: 10.3rem;
+    right: 10.3rem;
+  };
+  .footer_logo_wrapper {
+    margin-left: -0.8rem;
+  }
+
+  .footer_nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 7rem;
+    .footer_nav_item {
+      margin: 0 1.9rem;
+      padding-bottom: 0.1rem;
+      a {
+        @include font_set(0.85rem, 600, #484848, $font_dark_color);
+        &:hover:after,
+        &:focus:after {
+          width: 100%;
+        }
+        &:after {
+          margin-top: 0.3rem;
+          display: block;
+          content: "";
+          height: 0.2rem;
+          width: 0;
+          background-color: #248ddc;
+          transition: width .1s ease-in-out;
+        }
+      }
+    }
+  }
+  .copyright {
+    padding-bottom: 0.45rem;
+    color: $font_light_color;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+  }
+}
+/*-------- Footer end ------------*/
